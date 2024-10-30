@@ -308,7 +308,9 @@ elif diffusion_method == 'hondzoStefan':
     kzn = eddy_diffusivity(dens_u_n2, depth, g, np.mean(dens_u_n2) , ice, area, u, kz) / 86400
 elif diffusion_method == 'pacanowskiPhilander':
     kzn = eddy_diffusivity_pacanowskiPhilander(dens_u_n2, depth, g, np.mean(dens_u_n2) , ice, area, Uw_n,  43.100948, u, kz, Cd, km, weight_kz, k0) 
-        
+
+
+# INCREASE KZN AS A TESTS
 kzn = kzn *100
 print(max(kzn))
 print(min(kzn))
